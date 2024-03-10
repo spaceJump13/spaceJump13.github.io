@@ -62,7 +62,7 @@ function clearCards() {
 function createCard(data) {
   var cardWrapper = document.createElement('div');
   cardWrapper.innerHTML = 
-  `<div class="col">
+  `<div class="col-md-6 col-lg-4">
       <div class="customCard">
         <img src="${data.img}" class="card-img" alt="...">
         <div class="card-body">
@@ -102,6 +102,28 @@ function seeDetail(data) {
     window.location.href = "/detail.html";
   }
 }
+
+// function seeDetail(data) {
+//   var url = `https://tes1-3abcd-default-rtdb.asia-southeast1.firebasedatabase.app/tes1/${data.id}.json`;
+//   if (!localStorage.getItem(data.id)){
+//     fetch(url)
+//     .then((res) => res.json())
+//     .then((cardDetail) => {
+//       localStorage.setItem(data.id, JSON.stringify(cardDetail));
+//       localStorage.setItem('now', JSON.stringify(cardDetail));
+//       window.location.href = "/detail.html";
+//     })
+//     .catch((error) => {
+//       console.error('Error fetching data:', error);
+//       window.location.href = "/offline.html";
+//     })
+//   }
+
+//   else{
+//     localStorage.setItem('now', JSON.stringify(data));
+//     window.location.href = "/detail.html";
+//   }
+// }
 
 function updateUI(data) {
   clearCards();
