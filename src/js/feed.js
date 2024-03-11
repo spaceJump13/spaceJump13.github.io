@@ -107,29 +107,6 @@ async function seeDetail(data) {
   }
 }
 
-
-// function seeDetail(data) {
-//   var url = `https://tes1-3abcd-default-rtdb.asia-southeast1.firebasedatabase.app/tes1/${data.id}.json`;
-//   if (!localStorage.getItem(data.id)){
-//     fetch(url)
-//     .then((res) => res.json())
-//     .then((cardDetail) => {
-//       localStorage.setItem(data.id, JSON.stringify(cardDetail));
-//       localStorage.setItem('now', JSON.stringify(cardDetail));
-//       window.location.href = "/detail.html";
-//     })
-//     .catch((error) => {
-//       console.error('Error fetching data:', error);
-//       window.location.href = "/offline.html";
-//     })
-//   }
-
-//   else{
-//     localStorage.setItem('now', JSON.stringify(data));
-//     window.location.href = "/detail.html";
-//   }
-// }
-
 function updateUI(data) {
   clearCards();
   for (var i = 0; i < data.length; i++) {
