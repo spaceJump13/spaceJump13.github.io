@@ -62,7 +62,7 @@ function clearCards() {
 function createCard(data) {
   var cardWrapper = document.createElement('div');
   cardWrapper.innerHTML = 
-  `<div class="col-md-12 col-lg-8">
+  `<div class="col-lg-12 col-md-12 col-sm-12">
       <div class="customCard">
         <img src="${data.img}" class="card-img" alt="...">
         <div class="card-body">
