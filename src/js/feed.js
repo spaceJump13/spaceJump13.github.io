@@ -1,6 +1,6 @@
 var installButton = document.querySelector('#installTrigger');
-var createPostArea = document.querySelector('#create-post');
-var closeCreatePostModalButton = document.querySelector('#close-create-post-modal-btn');
+// var createPostArea = document.querySelector('#create-post');
+// var closeCreatePostModalButton = document.querySelector('#close-create-post-modal-btn');
 var sharedMomentsArea = document.querySelector('#myCard');
 
 installButton.addEventListener('click', openCreatePostModal);
@@ -33,25 +33,25 @@ function openCreatePostModal() {
   // }
 }
 
-function closeCreatePostModal() {
-  createPostArea.style.display = 'none';
-}
+// function closeCreatePostModal() {
+//   createPostArea.style.display = 'none';
+// }
 
 // shareImageButton.addEventListener('click', openCreatePostModal);
 
 // closeCreatePostModalButton.addEventListener('click', closeCreatePostModal);
 
 // Currently not in use, allows to save assets in cache on demand otherwise
-function onSaveButtonClicked(event) {
-  console.log('clicked');
-  if ('caches' in window) {
-    caches.open('user-requested')
-      .then(function(cache) {
-        cache.add('https://httpbin.org/get');
-        cache.add('/src/images/sf-boat.jpg');
-      });
-  }
-}
+// function onSaveButtonClicked(event) {
+//   console.log('clicked');
+//   if ('caches' in window) {
+//     caches.open('user-requested')
+//       .then(function(cache) {
+//         cache.add('https://httpbin.org/get');
+//         cache.add('/src/images/sf-boat.jpg');
+//       });
+//   }
+// }
 
 function clearCards() {
   while(sharedMomentsArea.hasChildNodes()) {
@@ -62,7 +62,7 @@ function clearCards() {
 function createCard(data) {
   var cardWrapper = document.createElement('div');
   cardWrapper.innerHTML = 
-  `<div class="col-md-6 col-lg-4">
+  `<div class="col-md-12 col-lg-8">
       <div class="customCard">
         <img src="${data.img}" class="card-img" alt="...">
         <div class="card-body">
